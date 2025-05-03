@@ -33,19 +33,19 @@ export default function SidebarMobile() {
 
         {/* Links */}
         <nav className="flex flex-col gap-6 p-6">
-          <a href="/home" className="flex items-center gap-2 text-lg">
+          <a href="/Colaboradores" className="flex items-center gap-2 text-lg">
             <Home /> Home
           </a>
-          <a href="/Eventos-Mobile" className="flex items-center gap-2 text-lg">
+          <a href="/Eventos" className="flex items-center gap-2 text-lg">
             <PartyPopper /> Eventos
           </a>
-          <a href="/estoque" className="flex items-center gap-2 text-lg">
+          <a href="/Estoque" className="flex items-center gap-2 text-lg">
             <Box /> Estoque
           </a>
-          <a href="/realocar" className="flex items-center gap-2 text-lg">
+          <a href="/Realocar" className="flex items-center gap-2 text-lg">
             <Repeat /> Realocar
           </a>
-          <a href="/cadastrar-materiais" className="flex items-center gap-2 text-lg">
+          <a href="/Cadastrar-Materiais" className="flex items-center gap-2 text-lg">
             <Layers3 /> Cadastrar Materiais
           </a>
         </nav>

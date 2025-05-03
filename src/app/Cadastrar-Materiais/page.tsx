@@ -14,6 +14,7 @@ import geradorIcon from "/public/geradorIcon.svg";
 import climatizacaoIcon from "/public/climatizacaoIcon.svg";
 import SaneamentoIcon from "/public/sanitario.svg";
 import BoxIcon from "/public/Material.svg";
+import SidebarMobile from "@/components/sideBarMobile";
 
 // Função para pegar o ícone da categoria
 const getCategoriaIcon = (categoria: string | number) => {
@@ -106,7 +107,7 @@ export default function CadastrarMateriais() {
 
   return (
     <div className="min-h-screen bg-[#100D1E] text-white p-4 flex flex-col gap-6 pb-32">
-      
+      <SidebarMobile />
       {/* Header */}
       <div className="flex justify-between items-center border-b border-[#292343] pb-2">
         <div className="flex items-center gap-2">
