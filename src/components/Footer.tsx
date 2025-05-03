@@ -1,6 +1,6 @@
 import Buttons from "./Buttons";
-import Bug from "../../public/Bug.svg";
-import DenzelFooter from "../../public/Logo-Footer.svg";
+import Bug from "/public/Bug.svg";
+import DenzelFooter from "/public/Logo-Footer.svg";
 import Image from "next/image";
 
 export default function Footer() {

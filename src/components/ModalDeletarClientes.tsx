@@ -2,7 +2,7 @@
 import { Dialog } from "@headlessui/react";
 import { Trash2, X } from "lucide-react";
 import Image from "next/image";
-import AlertaIcon from "../../public/Alert-Alerta.svg";
+import AlertaIcon from "/public/Alert-Alerta.svg";
 import { useState } from "react";
 
 interface ModalExcluirClienteProps {
