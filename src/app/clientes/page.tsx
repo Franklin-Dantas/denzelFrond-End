@@ -4,7 +4,6 @@ import {  Plus } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ClienteIcon from "/Cliente.png";
-import Lixeira from "/Lixeira.svg";
 import Editar from "/Editar.svg";
 import Filters from "/Filters.svg";
 import Image from "next/image";
@@ -371,7 +370,7 @@ const [dropdownLocked, setDropdownLocked] = useState(false);
                               }}
                               className="text-red-400 hover:text-red-500 transition"
                             >
-                              <Image src={Lixeira} width={28} height={28} alt="Excluir" />
+                              <Image src={"/Lixeira.svg"} width={28} height={28} alt="Excluir" />
                             </button>
                             <button
                               onClick={() => {
