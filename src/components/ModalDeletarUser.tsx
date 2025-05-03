@@ -25,25 +25,28 @@ export default function ModalExcluirColaborador({
   async function excluirColaborador() {
     const token = localStorage.getItem("token");
     if (!token) return;
-
+  
     try {
       setLoading(true);
-
+  
       const response = await fetch(`https://denzel-backend.onrender.com/api/usuarios/Deletar/${idColaborador}`, {
         method: "DELETE",
         headers: {
-            "Content-Type": "application/json",
+          "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
       });
-
-      if (!response.ok) {
-        throw new Error("Erro ao excluir cliente.");
+  
+      if (response.ok) {
+        
+        alert("Cliente excluído com sucesso!");
+        onSuccess();
+        onClose();
+      } else {
+        const errorData = await response.json();
+        alert(errorData.message || "Erro ao excluir cliente.");
       }
-
-      alert("Cliente excluído com sucesso!");
-      onSuccess(); 
-      onClose();   
+  
     } catch (error) {
       console.error(error);
       alert("Erro ao excluir cliente.");
@@ -51,6 +54,7 @@ export default function ModalExcluirColaborador({
       setLoading(false);
     }
   }
+  
 
   return (
     <Dialog open={isOpen} onClose={onClose} className="relative z-50">
