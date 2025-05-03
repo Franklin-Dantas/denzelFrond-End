@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { FormularioEventoProvider } from "../context/FormularioEventoContext";
+import { MateriaisProvider } from "../context/CadastrarMaterialContext";
+import { Lexend } from "next/font/google";
+
+const lexend = Lexend({
+  variable: "--font-lexend",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +32,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="pt-BR">
+      <body className={`${lexend.variable} ${geistSans.variable} ${geistMono.variable} font-sans`}>
+        <FormularioEventoProvider>
+          <MateriaisProvider>
+            {children}
+          </MateriaisProvider>
+        </FormularioEventoProvider>
       </body>
     </html>
   );
