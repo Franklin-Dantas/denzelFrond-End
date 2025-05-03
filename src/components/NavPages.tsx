@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Previus from "/public/PreviusIcon.svg";
-import Next from "/public/Next.svg";
+import Next from "/public/next.svg";
 
 interface NavPagesProps {
   page: number;
