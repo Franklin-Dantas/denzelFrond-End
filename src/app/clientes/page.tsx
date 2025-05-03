@@ -3,19 +3,19 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {  Plus } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import ClienteIcon from "/public/Cliente.png";
-import Lixeira from "/public/Lixeira.svg";
-import Editar from "/public/Editar.svg";
-import Filters from "/public/Filters.svg";
+import ClienteIcon from "/Cliente.png";
+import Lixeira from "/Lixeira.svg";
+import Editar from "/Editar.svg";
+import Filters from "/Filters.svg";
 import Image from "next/image";
 import Cliente from "../../types/Cliente";
 import ClienteModal from "../../components/ModalCadastroCliente"; 
 import { createCliente } from "../../helpers/ApiHelper";
 import NavPages from "../../components/NavPages";
-import ClientesTitulo from "/public/Titulo-Clientes.svg"
-import EventosIcon from "/public/Eventos.svg";
-import IdIcon from "/public/Id.svg";
-import TelefoneIcon from "/public/Telefone.svg";
+import ClientesTitulo from "/Titulo-Clientes.svg"
+import EventosIcon from "/Eventos.svg";
+import IdIcon from "/Id.svg";
+import TelefoneIcon from "/Telefone.svg";
 import EditarClienteModal from "../../components/MoldalEditarCliente";
 import ModalExcluirCliente from "../../components/ModalDeletarClientes";
 import BuscarCliente from "../../components/BuscarCliente";

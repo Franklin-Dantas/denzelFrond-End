@@ -1,9 +1,9 @@
-import IluminacaoIcon from "../public/iluminacao.svg";
-import EstruturaIcon from "../public/estrutura.svg";
-import geradorIcon from "../public/geradorIcon.svg";
-import climatizacaoIcon from "../public/climatizacaoIcon.svg";
-import SaneamentoIcon from "../public/sanitario.svg";
-import BoxIcon from "../public/Material.svg";
+import IluminacaoIcon from "/iluminacao.svg";
+import EstruturaIcon from "/estrutura.svg";
+import geradorIcon from "/geradorIcon.svg";
+import climatizacaoIcon from "/climatizacaoIcon.svg";
+import SaneamentoIcon from "/sanitario.svg";
+import BoxIcon from "/Material.svg";
 
 export const getCategoriaIcon = (categoria: string | number) => {
   switch (categoria) {

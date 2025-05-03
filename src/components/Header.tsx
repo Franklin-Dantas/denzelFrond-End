@@ -1,18 +1,18 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import DenzelLogo from "/public/Denzel-Logo.svg";
-import HomeIcon from "/public/Home.svg";
-import Clientes from "/public/Clientes.svg";
-import Eventos from "/public/Eventos.svg";
-import BotaoNovoEvento from "/public/botao-novo-evento.svg";
-import Linha from "/public/Linha.png";
-import LinhaFooter from "/public/Linha-footer.png";
+import DenzelLogo from "/Denzel-Logo.svg";
+import HomeIcon from "/Home.svg";
+import Clientes from "/Clientes.svg";
+import Eventos from "/Eventos.svg";
+import BotaoNovoEvento from "/botao-novo-evento.svg";
+import Linha from "/Linha.png";
+import LinhaFooter from "/Linha-footer.png";
 import Buttons from "./Buttons";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { pegarDadosDoToken } from "../helpers/JwtDecoder";
-import Profile from "/public/Profile.svg";
+import Profile from "/Profile.svg";
 import IUsuario from "../types/Usuarios";
 import ModalAlterarSenha from "./ModalAlterarSenha";
 import NotificacaoBadge from "./IconeNotificacao";
