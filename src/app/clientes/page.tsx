@@ -1,20 +1,20 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import {  Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import ClienteIcon from "/Cliente.png";
-import Editar from "/Editar.svg";
-import Filters from "/Filters.svg";
+import ClienteIcon from "/public/Cliente.png"; // Ajuste para o diretório correto
+import Editar from "/public/Editar.svg"; // Ajuste para o diretório correto
+import Filters from "/public/Filters.svg"; // Ajuste para o diretório correto
 import Image from "next/image";
 import Cliente from "../../types/Cliente";
 import ClienteModal from "../../components/ModalCadastroCliente"; 
 import { createCliente } from "../../helpers/ApiHelper";
 import NavPages from "../../components/NavPages";
-import ClientesTitulo from "/Titulo-Clientes.svg"
-import EventosIcon from "/Eventos.svg";
-import IdIcon from "/Id.svg";
-import TelefoneIcon from "/Telefone.svg";
+import ClientesTitulo from "/public/Titulo-Clientes.svg"; // Ajuste para o diretório correto
+import EventosIcon from "/public/Eventos.svg"; // Ajuste para o diretório correto
+import IdIcon from "/public/Id.svg"; // Ajuste para o diretório correto
+import TelefoneIcon from "/public/Telefone.svg"; // Ajuste para o diretório correto
 import EditarClienteModal from "../../components/MoldalEditarCliente";
 import ModalExcluirCliente from "../../components/ModalDeletarClientes";
 import BuscarCliente from "../../components/BuscarCliente";

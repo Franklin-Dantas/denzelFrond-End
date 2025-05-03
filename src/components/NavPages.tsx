@@ -2,8 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import Previus from "/PreviusIcon.svg";
-import Next from "/Next.svg";
+import Previus from "/public/PreviusIcon.svg";
+import Next from "/public/Next.svg";
 
 interface NavPagesProps {
   page: number;
