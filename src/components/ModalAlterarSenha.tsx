@@ -59,6 +59,7 @@ export default function ModalAlterarSenha({ isOpen, onClose }: ModalAlterarSenha
       setSenhaAtual('');
       setNovaSenha('');
       setConfirmarSenha('');
+      onClose();
     } catch (err: unknown) {
       if (err instanceof Error) {
         setErro(err.message || 'Erro desconhecido.');
