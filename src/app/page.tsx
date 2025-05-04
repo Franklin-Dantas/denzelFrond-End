@@ -19,6 +19,7 @@ export default function Login() {
       });
       if (!response.ok) {
         const errorData = await response.json();
+        console.error("Erro ao fazer login:", errorData);
         setError(errorData.message || "Erro ao realizar o login.");
         return;
       }
