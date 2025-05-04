@@ -97,7 +97,7 @@ export default function Header() {
 
         <div className="flex justify-center flex-wrap gap-2 md:gap-4">
           <NavItem href="/Colaboradores" icon={HomeIcon} label="Home" />
-          <NavItem href="/Clientes" icon={Clientes} label="Clientes" />
+          <NavItem href="/clientes" icon={Clientes} label="Clientes" />
           <NavItem href="/Eventos" icon={Eventos} label="Eventos" />
           <NavItemLucide href="/Estoque" icon={<Box size={20} />} label="Estoque" />
           <NavItemLucide href="/Cadastrar-Materiais" icon={<Layers3 size={20} />} label="Cadastrar Materiais" />
