@@ -16,7 +16,7 @@ import Profile from "/public/Profile.svg";
 import IUsuario from "../types/Usuarios";
 import ModalAlterarSenha from "./ModalAlterarSenha";
 import NotificacaoBadge from "./IconeNotificacao";
-import { Box, Repeat, Layers3 } from "lucide-react";
+import { Box, Layers3 } from "lucide-react";
 
 export default function Header() {
   const [, setUserId] = useState<string>("");
