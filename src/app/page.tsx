@@ -30,8 +30,8 @@ export default function Login() {
       const data = await response.json();
       localStorage.setItem('token', data.token);
 
-      // Se for o primeiro acesso, abrir modal de alteração de senha
-      if (data.usuario?.QuantidadeAcesso === 0) {
+      // ✅ Corrigido: verifica QuantidadeAcessos com "s"
+      if (data.usuario?.QuantidadeAcessos === 0) {
         setMostrarModalSenha(true);
         return;
       }
@@ -86,7 +86,12 @@ export default function Login() {
             />
           </div>
 
-          <button type="submit" className="w-full h-10 bg-[#292343] text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-400 transition">Entrar</button>
+          <button
+            type="submit"
+            className="w-full h-10 bg-[#292343] text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-400 transition"
+          >
+            Entrar
+          </button>
         </form>
       </div>
     </>
