@@ -100,7 +100,6 @@ export default function Header() {
           <NavItem href="/Clientes" icon={Clientes} label="Clientes" />
           <NavItem href="/Eventos" icon={Eventos} label="Eventos" />
           <NavItemLucide href="/Estoque" icon={<Box size={20} />} label="Estoque" />
-          <NavItemLucide href="/Realocar" icon={<Repeat size={20} />} label="Realocar" />
           <NavItemLucide href="/Cadastrar-Materiais" icon={<Layers3 size={20} />} label="Cadastrar Materiais" />
         </div>
 
@@ -185,10 +184,11 @@ function NavItem({ href, icon, label }: { href: string; icon: StaticImageData; l
 function NavItemLucide({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
   return (
     <Link href={href}>
-      <div className="flex items-center justify-center gap-2 cursor-pointer text-white p-2 hover:bg-gradient-to-r hover:from-[#9C60DA] hover:to-[#43A3D5] rounded transition duration-300 w-[180px] h-[50px] font-lexend text-sm">
+      <div className="flex items-center justify-center gap-2 cursor-pointer text-white p-2 hover:bg-gradient-to-r hover:from-[#9C60DA] hover:to-[#43A3D5] rounded transition duration-300 w-[120px] h-[50px] font-lexend text-sm">
         {icon}
         <span>{label}</span>
       </div>
     </Link>
   );
 }
+
