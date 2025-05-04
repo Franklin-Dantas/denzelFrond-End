@@ -16,6 +16,7 @@ import Profile from "/public/Profile.svg";
 import IUsuario from "../types/Usuarios";
 import ModalAlterarSenha from "./ModalAlterarSenha";
 import NotificacaoBadge from "./IconeNotificacao";
+import { Box, Repeat, Layers3 } from "lucide-react";
 
 export default function Header() {
   const [, setUserId] = useState<string>("");
@@ -41,8 +42,7 @@ export default function Header() {
       console.warn("Token ausente.");
       return;
     }
-    console.log(token);
-  
+
     try {
       const response = await fetch(
         `https://denzel-backend.onrender.com/api/usuarios/buscar/${id}`,
@@ -53,20 +53,19 @@ export default function Header() {
           },
         }
       );
-  
+
       if (!response.ok) {
         const errText = await response.text();
         console.error(`Erro ${response.status}: ${errText}`);
         throw new Error("Erro ao buscar usuário.");
       }
-  
+
       const data = await response.json();
       setColaborador(data);
     } catch (error) {
       console.error("Erro no fetch de colaborador:", error);
     }
   }
-  
 
   const abrirMenu = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -87,31 +86,28 @@ export default function Header() {
 
   return (
     <div className="relative bg-[#1D1933] w-full z-10">
-      {/* Linha superior */}
       <div className="absolute top-0 left-0 w-full h-[5px]">
         <Image src={Linha} alt="Linha decorativa" className="w-full" height={5} priority />
       </div>
 
       <div className="flex flex-wrap justify-between items-center px-4 md:px-20 py-4 gap-4">
-        {/* Logo */}
         <Link href="/Home" className="flex items-center">
           <Image src={DenzelLogo} alt="Denzel Logo" width={120} height={40} />
         </Link>
 
-        {/* Navegação */}
         <div className="flex justify-center flex-wrap gap-2 md:gap-4">
           <NavItem href="/Colaboradores" icon={HomeIcon} label="Home" />
           <NavItem href="/Clientes" icon={Clientes} label="Clientes" />
           <NavItem href="/Eventos" icon={Eventos} label="Eventos" />
+          <NavItemLucide href="/Estoque" icon={<Box size={20} />} label="Estoque" />
+          <NavItemLucide href="/Realocar" icon={<Repeat size={20} />} label="Realocar" />
+          <NavItemLucide href="/Cadastrar-Materiais" icon={<Layers3 size={20} />} label="Cadastrar Materiais" />
         </div>
 
-        {/* Ações */}
         <div className="flex items-center gap-4">
           <Buttons icone={BotaoNovoEvento} title="Novo Evento" path="/Selecionar-clientes" />
 
-          {/* Dropdown do usuário + Notificações */}
           <div className="flex items-center gap-4 relative z-50">
-            {/* Dropdown */}
             <div
               className="relative flex flex-col items-end"
               onMouseEnter={abrirMenu}
@@ -161,13 +157,11 @@ export default function Header() {
               )}
             </div>
 
-            {/* Notificação ao lado do dropdown */}
             <NotificacaoBadge />
           </div>
         </div>
       </div>
 
-      {/* Linha inferior */}
       <div className="absolute bottom-0 left-0 w-full h-[1px]">
         <Image src={LinhaFooter} alt="Linha decorativa" className="w-full" height={1} priority />
       </div>
@@ -177,17 +171,22 @@ export default function Header() {
   );
 }
 
-interface NavItemProps {
-  href: string;
-  icon: StaticImageData;
-  label: string;
-}
-
-function NavItem({ href, icon, label }: NavItemProps) {
+function NavItem({ href, icon, label }: { href: string; icon: StaticImageData; label: string }) {
   return (
     <Link href={href}>
       <div className="flex items-center justify-center gap-2 cursor-pointer text-white p-2 hover:bg-gradient-to-r hover:from-[#9C60DA] hover:to-[#43A3D5] rounded transition duration-300 w-[120px] h-[50px] font-lexend text-sm">
         <Image src={icon} alt={label} width={20} height={20} />
+        <span>{label}</span>
+      </div>
+    </Link>
+  );
+}
+
+function NavItemLucide({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
+  return (
+    <Link href={href}>
+      <div className="flex items-center justify-center gap-2 cursor-pointer text-white p-2 hover:bg-gradient-to-r hover:from-[#9C60DA] hover:to-[#43A3D5] rounded transition duration-300 w-[180px] h-[50px] font-lexend text-sm">
+        {icon}
         <span>{label}</span>
       </div>
     </Link>
