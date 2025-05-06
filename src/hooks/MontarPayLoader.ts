@@ -43,7 +43,7 @@ export function useEnviarEvento() {
         formDataToSend.append("file", imagens[0]); // campo "file" para o multer
       }
 
-      const response = await fetch("http://localhost:3000/api/eventos/criar", {
+      const response = await fetch("https://denzel-backend.onrender.com/api/eventos/criar", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
