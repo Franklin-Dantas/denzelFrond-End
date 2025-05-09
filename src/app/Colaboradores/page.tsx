@@ -203,7 +203,7 @@ export default function Colaborador() {
                     <th className="p-3">
                       <div className="flex flex-col items-start w-full">
                         <div className="flex items-center gap-1">
-                          <Image src={UserIcon} alt="Colaborador" width={12} height={12} />
+                          <Image src={UserIcon} alt="Colaborador" width={16} height={16} />
                           <span className="font-bold text-white">Colaborador</span>
                         </div>
                         <div className="w-[180px] h-[1px] bg-gray-500 mt-1" />

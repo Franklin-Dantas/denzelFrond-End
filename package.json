@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.2",
     "date-fns": "^4.1.0",
+    "denzel-frond-end": "file:",
     "jwt-decode": "^4.0.0",
     "lucide-react": "^0.507.0",
     "next": "15.3.1",
