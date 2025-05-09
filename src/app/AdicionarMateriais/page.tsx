@@ -16,13 +16,13 @@ import { useEnviarEvento } from "../../hooks/MontarPayLoader";
 interface MaterialSelecionado {
   nome: string;
   quantidade: number;
-  categoria: number; 
+  categoria: number;
 }
 
 export default function AdicionarMateriais() {
   const [modalAberto, setModalAberto] = useState(false);
   const { materiais, setMateriais } = useFormularioEvento();
-  
+
   const enviarEvento = useEnviarEvento();
   const alocarMateriais = (novosMateriais: MaterialSelecionado[]) => {
     setMateriais((materiaisAtuais) => {
@@ -47,9 +47,10 @@ export default function AdicionarMateriais() {
           <h2 className="text-3xl font-light text-hover-gradient">Novo Evento</h2>
           <button
             onClick={() => setModalAberto(true)}
-            className="px-5 py-[10px] border border-white rounded-full flex items-center gap-2 hover:bg-gradient-to-r hover:from-[#9C60DA] hover:to-[#43A3D5] transition"
+            className="flex items-center gap-2 px-4 py-2 border border-[#1D1933] text-[#1D1933] rounded-md hover:bg-[#f3f0ff] transition"
           >
-            + Adicionar Material
+            <Image src="/Material.svg" alt="Ícone Material" width={18} height={18} />
+            <span className="font-medium">Adicionar Material</span>
           </button>
         </div>
 
@@ -127,9 +128,9 @@ export default function AdicionarMateriais() {
         {/* Navegação */}
         <div className="flex justify-between mt-8">
           <button className="px-6 py-2 rounded-l-[30px] border border-slate-200 text-white" >◀ Voltar</button>
-          
+
           <button className="px-6 py-2 rounded-r-[30px] border border-slate-200 text-white" onClick={() => enviarEvento.enviarEvento()}>Revisar ▶</button>
-          
+
         </div>
       </main>
       <Footer />
