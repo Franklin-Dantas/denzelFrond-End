@@ -186,7 +186,7 @@ export default function Colaborador() {
               </button>
               <button onClick={()=>setModalOpen(true)} className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-400 hover:from-purple-600 hover:to-blue-500 transition">
                 <Plus size={16} />
-                Novo colaborador
+                Novo Colaborador
               </button>
             </div>
           </div>
